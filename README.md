@@ -22,6 +22,7 @@ SyriaTel faces significant revenue loss due to customer churn. Retaining existin
 
 The dataset, sourced from [Kaggle](https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset), contains 3,333 customer records with 20 features, including account information, usage metrics, customer service interactions, and demographics. The target variable is `churn` (True/False).
 
+
 ---
 
 ## Modeling
