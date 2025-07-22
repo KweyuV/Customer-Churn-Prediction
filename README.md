@@ -22,6 +22,7 @@ SyriaTel faces significant revenue loss due to customer churn. Retaining existin
 
 The dataset, sourced from [Kaggle](https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset), contains 3,333 customer records with 20 features, including account information, usage metrics, customer service interactions, and demographics. The target variable is `churn` (True/False).
 
+![Churn Distribution](images/churn_distribution.png)
 
 ---
 
@@ -32,12 +33,13 @@ Two models were compared:
 - **Logistic Regression:** A linear, interpretable model suitable for baseline performance.
 - **Random Forest:** An ensemble model that handles non-linear relationships and class imbalance effectively.
 
-Key steps included:
-- Feature engineering (e.g., creating a `total_charge` feature).
-- Dropping non-predictive columns.
-- Grouping rare states to prevent overfitting.
-- Handling class imbalance using SMOTE.
-- Hyperparameter tuning for Random Forest using grid search.
+The modeling workflow included:
+
+- **Feature Engineering:** Created a `total_charge` feature, dropped non-predictive columns, and grouped rare states to prevent overfitting.
+- **Preprocessing:** Used a `ColumnTransformer` to encode categorical features and scale numerical features.
+- **Handling Class Imbalance:** Applied SMOTE to balance the training data (50% churned, 50% not churned).
+- **Model Selection:** Compared Logistic Regression (linear, interpretable) and Random Forest (ensemble, handles non-linearity).
+- **Hyperparameter Tuning:** Used grid search to optimize Random Forest for recall.
 
 ---
 
@@ -54,6 +56,15 @@ Models were evaluated using:
 
 ---
 
+## Feature Importance
+
+- Top features: `total_charge`, `customer_service_calls`, `international_plan`.
+- Insights used to guide business recommendations.
+
+![Top 10 Predictive Features](images/feature_importance.png)
+
+---
+
 ## Conclusion
 
 - **Random Forest** is the recommended model due to its superior performance, especially in handling class imbalance and identifying churned customers.
@@ -65,4 +76,4 @@ Models were evaluated using:
   - Monitor and support high-usage customers.
   - Enhance customer service to address issues promptly.
 
-This project provides a robust framework for churn prediction, enabling SyriaTel to implement targeted retention strategies and reduce customer attrition.
+**For details and code, see [Customer-Churn-Prediction.ipynb](Customer-Churn-Prediction.ipynb).**
