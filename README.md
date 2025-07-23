@@ -1,5 +1,9 @@
 # Customer Churn Prediction - SyriaTel
 
+<p align="center">
+  <img src="Images\Customer-Churn.png" alt="Customer Churn" width="1200" height=400"/>
+</p>
+
 ## Overview
 
 This project aims to predict customer churn for SyriaTel, a telecommunications company, using machine learning techniques. By identifying customers likely to leave, the company can take proactive measures to retain them, reducing revenue loss and improving customer lifetime value.
